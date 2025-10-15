@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+
+# Build outputs
+dist/
+
+# Environment files
+.env
+
+# Docker
+.dockerignore
+
+# Prisma
+prisma/migrations/
+
+
+# Client specific
+client/.env
+client/node_modules/
+client/dist/
+
+# Server specific
+server/.env
+server/node_modules/
+server/dist/
