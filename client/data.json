@@ -1,0 +1,119 @@
+{
+  "users": [
+    {
+      "id": "3f8c1a2e-1c5d-4b9a-9f1a-0a2b3c4d5e6f",
+      "username": "alice"
+    },
+    {
+      "id": "8b7a6c5d-4e3f-2a1b-0c9d-8e7f6a5b4c3d",
+      "username": "bob"
+    }
+  ],
+
+  "posts": [
+    {
+      "id": "f866fdf2-7c9a-4933-aaee-3cb429c50659",
+      "value": "10.00",
+      "authorId": "3f8c1a2e-1c5d-4b9a-9f1a-0a2b3c4d5e6f",
+      "createdAt": "2025-10-01T10:00:00.000Z"
+    },
+    {
+      "id": "a1b2c3d4-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+      "value": "100.00",
+      "authorId": "8b7a6c5d-4e3f-2a1b-0c9d-8e7f6a5b4c3d",
+      "createdAt": "2025-10-02T11:00:00.000Z"
+    }
+  ],
+
+  "operations": [
+    {
+      "id": "11111111-1111-1111-1111-111111111111",
+      "postId": "f866fdf2-7c9a-4933-aaee-3cb429c50659",
+      "authorId": "8b7a6c5d-4e3f-2a1b-0c9d-8e7f6a5b4c3d",
+      "operation": "ADD",
+      "operand": "5.00",
+      "result": "15.00",
+      "parentId": null,
+      "createdAt": "2025-10-01T10:05:00.000Z",
+      "updatedAt": "2025-10-01T10:05:00.000Z"
+    },
+    {
+      "id": "22222222-2222-2222-2222-222222222222",
+      "postId": "f866fdf2-7c9a-4933-aaee-3cb429c50659",
+      "authorId": "3f8c1a2e-1c5d-4b9a-9f1a-0a2b3c4d5e6f",
+      "operation": "MUL",
+      "operand": "2.00",
+      "result": "30.00",
+      "parentId": "11111111-1111-1111-1111-111111111111",
+      "createdAt": "2025-10-01T10:10:00.000Z",
+      "updatedAt": "2025-10-01T10:10:00.000Z"
+    },
+    {
+      "id": "33333333-3333-3333-3333-333333333333",
+      "postId": "f866fdf2-7c9a-4933-aaee-3cb429c50659",
+      "authorId": "8b7a6c5d-4e3f-2a1b-0c9d-8e7f6a5b4c3d",
+      "operation": "SUB",
+      "operand": "10.00",
+      "result": "20.00",
+      "parentId": "22222222-2222-2222-2222-222222222222",
+      "createdAt": "2025-10-01T10:15:00.000Z",
+      "updatedAt": "2025-10-01T10:15:00.000Z"
+    },
+    {
+      "id": "44444444-4444-4444-4444-444444444444",
+      "postId": "f866fdf2-7c9a-4933-aaee-3cb429c50659",
+      "authorId": "3f8c1a2e-1c5d-4b9a-9f1a-0a2b3c4d5e6f",
+      "operation": "ADD",
+      "operand": "3.00",
+      "result": "13.00",
+      "parentId": null,
+      "createdAt": "2025-10-01T11:00:00.000Z",
+      "updatedAt": "2025-10-01T11:00:00.000Z"
+    },
+
+    {
+      "id": "55555555-5555-5555-5555-555555555555",
+      "postId": "a1b2c3d4-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+      "authorId": "3f8c1a2e-1c5d-4b9a-9f1a-0a2b3c4d5e6f",
+      "operation": "ADD",
+      "operand": "50.00",
+      "result": "150.00",
+      "parentId": null,
+      "createdAt": "2025-10-02T11:05:00.000Z",
+      "updatedAt": "2025-10-02T11:05:00.000Z"
+    },
+    {
+      "id": "66666666-6666-6666-6666-666666666666",
+      "postId": "a1b2c3d4-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+      "authorId": "8b7a6c5d-4e3f-2a1b-0c9d-8e7f6a5b4c3d",
+      "operation": "DIV",
+      "operand": "3.00",
+      "result": "50.00",
+      "parentId": "55555555-5555-5555-5555-555555555555",
+      "createdAt": "2025-10-02T11:10:00.000Z",
+      "updatedAt": "2025-10-02T11:10:00.000Z"
+    },
+    {
+      "id": "77777777-7777-7777-7777-777777777777",
+      "postId": "a1b2c3d4-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+      "authorId": "3f8c1a2e-1c5d-4b9a-9f1a-0a2b3c4d5e6f",
+      "operation": "MUL",
+      "operand": "1.50",
+      "result": "75.00",
+      "parentId": "66666666-6666-6666-6666-666666666666",
+      "createdAt": "2025-10-02T11:15:00.000Z",
+      "updatedAt": "2025-10-02T11:15:00.000Z"
+    },
+    {
+      "id": "88888888-8888-8888-8888-888888888888",
+      "postId": "a1b2c3d4-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+      "authorId": "8b7a6c5d-4e3f-2a1b-0c9d-8e7f6a5b4c3d",
+      "operation": "SUB",
+      "operand": "25.00",
+      "result": "50.00",
+      "parentId": "77777777-7777-7777-7777-777777777777",
+      "createdAt": "2025-10-02T11:20:00.000Z",
+      "updatedAt": "2025-10-02T11:20:00.000Z"
+    }
+  ]
+}

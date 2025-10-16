@@ -12,13 +12,22 @@ export const createPost = (authorId: string, value: number) => {
 export const postList = () => {
   return prismaClient.post.findMany({
     orderBy: { createdAt: "desc" },
-    include: { operations: true },
+    include: { operations: true, author: { select: { username: true } } },
   });
 };
 
 export const findPostById = (id: string) => {
-  return prismaClient.post.findFirst({
-    where: { id: id },
+  return prismaClient.post.findUnique({
+    where: { id },
+    include: {
+      author: { select: { id: true, username: true } },
+      operations: {
+        where: { parentId: null },
+        include: {
+          author: { select: { id: true, username: true } },
+        },
+      },
+    },
   });
 };
 

@@ -31,7 +31,7 @@ export const getPostList = CatchAsyncRequest(
   async (req: Request, res: Response, next: NextFunction) => {
     const postList = await PostService.postList();
 
-    res.status(201).json({
+    res.status(200).json({
       success: true,
       data: {
         posts: postList,
