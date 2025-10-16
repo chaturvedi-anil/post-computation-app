@@ -21,7 +21,6 @@ router.get("/me", isAuthenticated, getMe);
 
 // post routes
 router.post("/posts", isAuthenticated, validateRequest(postSchema), createPost);
-router.get("/posts/:id", isAuthenticated, getPost);
 router.delete("/posts/:id", isAuthenticated, deletePost);
 router.post(
   "/posts/:id/operations",
@@ -32,6 +31,7 @@ router.post(
 
 // guest user routes
 router.get("/posts", getPostList);
+router.get("/posts/:id", getPost);
 router.get("/posts/:id/operations", getOperationsList);
 
 export default router;
