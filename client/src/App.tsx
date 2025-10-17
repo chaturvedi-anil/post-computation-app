@@ -1,21 +1,20 @@
 import { Routes, Route } from "react-router-dom";
 import PostsList from "./components/PostsList";
-import Navbar from "./components/Navbar";
 import Post from "./components/Post";
-import "./App.scss";
+import NavbarNew from "./components/NavbarNew";
 
 const App = () => {
   return (
-    <div className="container">
-      <Navbar />
+    <>
+      <NavbarNew />
 
-      <div className="content">
+      <div className="mx-42">
         <Routes>
           <Route path="/" element={<PostsList />} />
           <Route path="/posts/:id" element={<Post />} />
         </Routes>
       </div>
-    </div>
+    </>
   );
 };
 
