@@ -46,7 +46,7 @@ const PostsList = () => {
                 className=" bg-indigo-600 cursor-pointer text-white text-md px-3 py-1 rounded-md font-semibold hover:bg-indigo-700"
                 asChild
               >
-                <Link to={"/post"}>Start Conversation</Link>
+                <Link to={`/posts/${post.id}`}>Start Conversation</Link>
               </Button>
               <Button variant={"outline"} size={"icon"}></Button>
             </CardFooter>

@@ -1,6 +1,16 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useMemo } from "react";
-
+import { Link } from "react-router-dom";
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "./ui/button";
 import { useAsyncFn } from "../hooks/useAsync";
 import { fetchPost } from "../apis/postsApi";
 
@@ -41,24 +51,33 @@ const Post = () => {
   if (error) return <h1 className="error-msg">{String(error)}</h1>;
 
   return (
-    <div className="post-details-container">
+    <>
       {loading ? (
         <h1>Loading...</h1>
       ) : (
         post && (
-          <div className="post-details">
-            <div className="post-head">
-              <p className="author-name">{post.author.username}</p>
-              <p className="date-time">{getDate(post.createdAt)}</p>
-            </div>
-            <p className="post-value">{post.value}</p>
-            <div className="post-actions">
-              <button>View Post</button>
-            </div>
-          </div>
+          <Card className="my-5">
+            <CardHeader>
+              <CardTitle>{post.author.username}</CardTitle>
+              {/* <CardDescription>Card Description</CardDescription> */}
+              <CardAction>{getDate(post.createdAt)}</CardAction>
+            </CardHeader>
+            <CardContent>
+              <p>{post.value}</p>
+            </CardContent>
+            <CardFooter>
+              <Button
+                className=" bg-indigo-600 cursor-pointer text-white text-md px-3 py-1 rounded-md font-semibold hover:bg-indigo-700"
+                asChild
+              >
+                <Link to={"/post"}>Start Conversation</Link>
+              </Button>
+              <Button variant={"outline"} size={"icon"}></Button>
+            </CardFooter>
+          </Card>
         )
       )}
-    </div>
+    </>
   );
 };
 
